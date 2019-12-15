@@ -1,0 +1,6 @@
+{
+  "ExcelReaderOptions": {
+    "Path":  "settings/gamesettings",
+    "FieldNameRow": 2
+  }
+}
