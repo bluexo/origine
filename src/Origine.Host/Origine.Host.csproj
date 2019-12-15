@@ -86,13 +86,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Origine.Accessor\Origine.Accessor.csproj" />
+    <ProjectReference Include="..\Origine.Configuration\Origine.Configuration.csproj" />
     <ProjectReference Include="..\Origine.Core.Abstraction\Origine.Core.Abstraction.csproj" />
-    <ProjectReference Include="..\Origine.Core.Configuration\Origine.Configuration.csproj" />
-    <ProjectReference Include="..\Origine.Core.HealthCheck\Origine.HealthCheck.csproj" />
-    <ProjectReference Include="..\Origine.Core.Logging\Origine.Logging.csproj" />
-    <ProjectReference Include="..\Origine.Core.Network\Origine.Core.csproj" />
+    <ProjectReference Include="..\Origine.Core\Origine.Core.csproj" />
     <ProjectReference Include="..\Origine.EntityFramework\Origine.EntityFramework.csproj" />
-    <ProjectReference Include="..\Origine.Storage.Accessor\Origine.Accessor.csproj" />
+    <ProjectReference Include="..\Origine.HealthCheck\Origine.HealthCheck.csproj" />
+    <ProjectReference Include="..\Origine.Logging\Origine.Logging.csproj" />
   </ItemGroup>
 
   <ItemGroup>

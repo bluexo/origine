@@ -19,6 +19,5 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Origine.Core.Abstraction\Origine.Core.Abstraction.csproj" />
-    <ProjectReference Include="..\Origine.Core.Network\Origine.Core.csproj" />
   </ItemGroup>
 </Project>
