@@ -77,7 +77,6 @@
     <ProjectReference Include="..\Origine.Core.Configuration\Origine.Configuration.csproj" />
     <ProjectReference Include="..\Origine.Core.Logging\Origine.Logging.csproj" />
     <ProjectReference Include="..\Origine.Core.Network\Origine.Core.csproj" />
-    <ProjectReference Include="..\Origine.Interfaces\Origine.Interfaces.csproj" />
   </ItemGroup>
 
 </Project>

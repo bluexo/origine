@@ -92,9 +92,6 @@
     <ProjectReference Include="..\Origine.Core.Logging\Origine.Logging.csproj" />
     <ProjectReference Include="..\Origine.Core.Network\Origine.Core.csproj" />
     <ProjectReference Include="..\Origine.EntityFramework\Origine.EntityFramework.csproj" />
-    <ProjectReference Include="..\Origine.Grains.Abstraction\Origine.Grains.Abstraction.csproj" />
-    <ProjectReference Include="..\Origine.Grains.Infrastructure\Origine.Grains.Infrastructure.csproj" />
-    <ProjectReference Include="..\Origine.Interfaces\Origine.Interfaces.csproj" />
     <ProjectReference Include="..\Origine.Storage.Accessor\Origine.Accessor.csproj" />
   </ItemGroup>
 
