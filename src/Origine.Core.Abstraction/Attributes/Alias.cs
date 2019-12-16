@@ -3,7 +3,7 @@
 namespace Origine
 {
     [AttributeUsage(AttributeTargets.All)]
-    public class Alias : Attribute
+    public sealed class Alias : Attribute
     {
         public string Name { get; set; }
 
