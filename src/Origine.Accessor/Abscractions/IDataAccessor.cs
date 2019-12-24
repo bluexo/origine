@@ -1,15 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using System.Threading.Tasks;
+using System.Linq.Expressions;
+using System.Collections.Generic;
 
-using MongoDB;
-using MongoDB.Driver;
-
-namespace Origine.Storage.Accessor
+namespace Origine.Accessor
 {
+    /// <summary>
+    /// 数据查询接口
+    /// </summary>
     public interface IDataAccessor
     {
-        IQueryable<T> GetItems<T>(string collectionName);
+        /// <summary>
+        /// 获取查询接口
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        IQueryable<GrainData<TState>> GetQueryable<TState>(string name = null);
+
     }
 }

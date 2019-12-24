@@ -9,11 +9,13 @@ var outputPath = "./Publish/";
 var projects = new string[] {  "Origine.Host" , "Origine.WebApi" , "Origine.Dashboard"};
 var testProjects = GetFiles ("./tests/**/*.csproj");
 var packOutPath = "./Publish/packages";
-var packProjects = GetFiles("./Origine.*/*.csproj");
+var packProjects = GetFiles("./src/Origine.*/*.csproj");
 var harborUrl = "registry.yixingames.net:11180";
 var registry = $"{harborUrl}/cluster/";
+
 var nugetUrl = "http://registry.yixingames.net:11181/";
 var nugetApiKey = "7bc6998c-5f00-4e9f-ab7e-b909c38a1f07";
+
 var jenkinsUrl = "http://registry.yixingames.net:11185/";
 var jenkinsToken = "d32a24d5-4107-46f9-a380-4e4dfbd11a9c";
 
@@ -64,7 +66,7 @@ Task ("Pack")
         var settings = new DotNetCorePackSettings {
             Configuration = configuration,
             OutputDirectory = packOutPath,
-            VersionSuffix = $"{TimeStamp()}",
+            //VersionSuffix = $"{TimeStamp()}",
         };
         foreach (var project in packProjects) {
             DotNetCorePack (project.FullPath, settings);
@@ -75,7 +77,7 @@ Task ("Pack")
         };
         var packages = GetFiles ($"{packOutPath}/*.nupkg");
         foreach (var package in packages) {
-            DotNetCoreNuGetPush (package.FullPath, pushSetting);
+            //DotNetCoreNuGetPush (package.FullPath, pushSetting);
         }
     });
 
@@ -125,7 +127,6 @@ Task("Push")
     .IsDependentOn("Clean")
     .IsDependentOn("Publish")
     .IsDependentOn("Dockerize");
-
 
 //构建镜像并且发布到服务器
 Task("Deploy")

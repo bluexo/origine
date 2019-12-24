@@ -6,7 +6,7 @@ using MongoDB.Driver;
 using Orleans.Hosting;
 using Orleans.Providers.MongoDB.Configuration;
 
-namespace Origine.Storage.Accessor
+namespace Origine.Accessor
 {
     public static class MongoDbExtensions
     {
@@ -15,12 +15,6 @@ namespace Origine.Storage.Accessor
             siloBuilder.ConfigureServices(services =>
             {
                 services.AddSingleton<IDataAccessor, MongoDbDataAccessor>();
-                services.AddSingleton(provider =>
-                {
-                    var options = provider.GetService<MongoDBOptions>();
-                    var client = provider.GetService<IMongoClient>();
-                    return client.GetDatabase(options.DatabaseName);
-                });
             });
             return siloBuilder;
         }

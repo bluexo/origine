@@ -2,9 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <ApplicationIcon />
-    <OutputType>Library</OutputType>
-    <StartupObject />
+    <RootNamespace>Origine</RootNamespace>
+    <Version>0.1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -33,7 +32,6 @@
     <PackageReference Include="Microsoft.Orleans.Runtime.Abstractions" Version="3.0.2" />
     
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="3.1.0" />
-    
     <PackageReference Include="Orleans.Providers.EntityFramework" Version="0.14.6" />
   </ItemGroup>
 
