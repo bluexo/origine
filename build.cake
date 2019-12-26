@@ -13,10 +13,10 @@ var packProjects = GetFiles("./src/Origine.*/*.csproj");
 var harborUrl = "registry.yongegames.net:11180";
 var registry = $"{harborUrl}/cluster/";
 
-var nugetUrl = "http://registry.yongegames.net";
+var nugetUrl = "http://registry.yongegames.com";
 var nugetApiKey = "7bc6998c-5f00-4e9f-ab7e-b909c38a1f07";
 
-var jenkinsUrl = "http://jenkins.yongegames.net";
+var jenkinsUrl = "http://jenkins.yongegames.com";
 var jenkinsToken = "d32a24d5-4107-46f9-a380-4e4dfbd11a9c";
 
 int TimeStamp() => (int)((DateTime.UtcNow - new DateTime(2019, 11, 15)).TotalMinutes);
