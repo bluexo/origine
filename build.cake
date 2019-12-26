@@ -10,10 +10,10 @@ var projects = new string[] {  "Origine.Host" , "Origine.WebApi" , "Origine.Dash
 var testProjects = GetFiles ("./tests/**/*.csproj");
 var packOutPath = "./Publish/packages";
 var packProjects = GetFiles("./src/Origine.*/*.csproj");
-var harborUrl = "registry.yongegames.net:11180";
+var harborUrl = "registry.yongegames.com";
 var registry = $"{harborUrl}/cluster/";
 
-var nugetUrl = "http://registry.yongegames.com";
+var nugetUrl = "http://nuget.yongegames.com";
 var nugetApiKey = "7bc6998c-5f00-4e9f-ab7e-b909c38a1f07";
 
 var jenkinsUrl = "http://jenkins.yongegames.com";
