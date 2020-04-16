@@ -1,0 +1,79 @@
+!Skeleton
+Id: b2239f41-2b02-4bb6-bab9-9733931be962
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Source: !file ../../../../StarX/client/Assets/Packs/PolygonSciFiCity/Models/Characters.fbx
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Nodes:
+    5e6e7248c394a2f6649a8a64263d9e88: {Name: RootNode, Depth: 0}
+    1813dd2b9c39606251f4bb455d81014f: {Name: Root, Depth: 1}
+    456310b5de05333ad027eb74f2ec489c: {Name: Hips, Depth: 2}
+    d274a96f97df471a856c6696880d8cbe: {Name: Spine_01, Depth: 3}
+    8a1165521ef3a59c5e5eee7cb0c85cc7: {Name: Spine_02, Depth: 4}
+    a7d9fae7dd3dd99cfc40ebd6b78246a7: {Name: Spine_03, Depth: 5}
+    3acce7df04425a9b3024a8bbdd2b927e: {Name: Neck, Depth: 6}
+    69135e9fe683e47a4b13f3783ba50471: {Name: Head, Depth: 7}
+    718882ee8099cebc83be07070a812fc0: {Name: Eyes, Depth: 8}
+    72aa4cb2298e18a9dd1d4a039d7914d2: {Name: Eyebrows, Depth: 8}
+    cd10f62641fcd5d9fa5478cd5ee35bc7: {Name: Clavicle_L, Depth: 6}
+    9da8813d82d5aac87842b376f3055391: {Name: Shoulder_L, Depth: 7}
+    845633c5c8e0d84e469bcb118af02838: {Name: Elbow_L, Depth: 8}
+    406961b6c98ec53f0ceda54cadea3525: {Name: Hand_L, Depth: 9}
+    ee98799d26d9936b5f514c55882b1a3e: {Name: Thumb_01_1, Depth: 10}
+    5cb5e79835b222ad4214287823d8dd91: {Name: Thumb_02_1, Depth: 11}
+    c46e403ff735b7ce03a42c51fad3dd99: {Name: Thumb_03_1, Depth: 12}
+    65cec2782f6ad4879fac5158225df68c: {Name: IndexFinger_01_1, Depth: 10}
+    197ebbf00f3a0a2c40992b560c7317a7: {Name: IndexFinger_02_1, Depth: 11}
+    df08acb2708108530d7d71a23178ee3f: {Name: IndexFinger_03_1, Depth: 12}
+    af4a963722437a8a69bc511b5efdd5a0: {Name: IndexFinger_04_1, Depth: 13}
+    3984256c22792c2d1ab70da6a27efb70: {Name: Finger_01_1, Depth: 10}
+    d0a542b2ee4f67368cfc8ebfe51719c9: {Name: Finger_02_1, Depth: 11}
+    a22e84e959bba9efb7c02954841587d7: {Name: Finger_03_1, Depth: 12}
+    b8ee8a882afa0d987b468987c71201d2: {Name: Finger_04_1, Depth: 13}
+    0d4acfa9d510de2a52889a45839a8b40: {Name: Clavicle_R, Depth: 6}
+    3ad61ea5d02badd8147c920cf512cc67: {Name: Shoulder_R, Depth: 7}
+    20589b6cf397d07ee906807f702f9834: {Name: Elbow_R, Depth: 8}
+    a810732e7b8685f8c69a1c588c8d9976: {Name: Hand_R, Depth: 9}
+    355671a71cff49afaf0996913e1e8514: {Name: Thumb_01_2, Depth: 10}
+    3908cb771b892912a7e5edb2844bce7c: {Name: Thumb_02_2, Depth: 11}
+    32ea01a88a5c3dbfd831a34bf519253f: {Name: Thumb_03_2, Depth: 12}
+    af2dd08e27d26c609d693f61d9ca2e1a: {Name: IndexFinger_01_2, Depth: 10}
+    66cd52cc9fe0611ae9471663e0d3a794: {Name: IndexFinger_02_2, Depth: 11}
+    45c8b082f9f22f6b572d8c1155bc3016: {Name: IndexFinger_03_2, Depth: 12}
+    c13113a78bb03a3802ddd955fb1c18d2: {Name: IndexFinger_04_2, Depth: 13}
+    fab288ef5bd2225d43204e9af11ea0e6: {Name: Finger_01_2, Depth: 10}
+    8d523d1db4d956c94085987a27b29fff: {Name: Finger_02_2, Depth: 11}
+    05ee706ebc43e3945791e9925be7814a: {Name: Finger_03_2, Depth: 12}
+    57df462e6fb3233b7535e96afbec42a3: {Name: Finger_04_2, Depth: 13}
+    1189f1c3662b43881acc6ffde8354daf: {Name: UpperLeg_R, Depth: 3}
+    0723330bc92f4eccda8e3a34e8baee6f: {Name: LowerLeg_R, Depth: 4}
+    c3d80f58436209fffe991a68bff97cd3: {Name: Ankle_R, Depth: 5}
+    e480c36994092c1d8675a938084874f8: {Name: Ball_R, Depth: 6}
+    cd9d264bc1ff19c5b30cc55fe38fb25f: {Name: Toes_R, Depth: 7}
+    755e2dc862109821bf50809965a7bcc5: {Name: UpperLeg_L, Depth: 3}
+    476523273b920a861a1c0c20884d3347: {Name: LowerLeg_L, Depth: 4}
+    a637be42fbb58404b086b3f99ad65495: {Name: Ankle_L, Depth: 5}
+    5e43a4903a3bfcc9e7c4e9b8eac1e3d3: {Name: Ball_L, Depth: 6}
+    b83cfed0edd7e91d183ff0a72d95d060: {Name: Toes_L, Depth: 7}
+    62e3b90e47483d864e99b856f59121bf: {Name: Character_Alien_Male_01, Depth: 1}
+    821720d0fb6f2d124cb3aaf558a031a5: {Name: Character_Alien_Male_02, Depth: 1}
+    0b8cfc649b18c6d65937233bb3556800: {Name: Character_Android_Female_01, Depth: 1}
+    41a5bc45bf9ee5b265e93b9e6a4ce195: {Name: Character_Augmented_Male_01, Depth: 1}
+    1e2528c2c7257666d1ebe7e395238d4b: {Name: Character_Cop_01, Depth: 1}
+    1ff4f00576f58eca61bd0a66a3ed8edb: {Name: Character_Cyber_Female_01, Depth: 1}
+    277a97d46be3d402512afc6af31d1de5: {Name: Character_Cyber_Male_01, Depth: 1}
+    e77c9535937b4b6165dada3ed8b710b9: {Name: Character_CyberPunk_Male_01, Depth: 1}
+    b90e3e2604b73baac904a5947717a69e: {Name: Character_CyborgNinja_01, Depth: 1}
+    8c45d6af15d1671f077900fdb4610e1e: {Name: Character_Garbage_Male_01, Depth: 1}
+    dcdc666485c35aeda4ef8d5335b10410: {Name: Character_Hacker_Female_01, Depth: 1}
+    94288d86146062f610e7d169820bc018: {Name: Character_Hologram_Female_01, Depth: 1}
+    d397a440fa5bbb844a7fd446e062f380: {Name: Character_Junky_Female_01, Depth: 1}
+    3ccef435dc74b9deb10841c68b4b2f76: {Name: Character_Junky_Male_01, Depth: 1}
+    dd3d779c3b4baf3ea14802827df296f4: {Name: Character_Medical_Male_01, Depth: 1}
+    c5625e9fc29cdd578e14a854bcb919fe: {Name: Character_Monk_Male_01, Depth: 1}
+    76fcd855654c2e1a21131f5281219d53: {Name: Character_Muscle_Male_01, Depth: 1}
+    7e1760f198ad876064c75f5d444c626c: {Name: Character_Rich_Female_01, Depth: 1}
+    ee76c9b46cda5e3c132eae1209bd98dd: {Name: Character_Rich_Male_01, Depth: 1}
+    2da2304e9b96cb9fa7ffdee4f0bee1aa: {Name: Character_Robot_01, Depth: 1}
+~SourceHashes:
+    6826277b9e8381b0f04b3abe2f82b639~../../../../StarX/client/Assets/Packs/PolygonSciFiCity/Models/Characters.fbx: 578fc7faedd811ff39f8e8d2d1e9411d

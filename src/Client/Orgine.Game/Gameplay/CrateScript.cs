@@ -1,4 +1,4 @@
-// Copyright (c) Xenko contributors (https://xenko.com) and Silicon Studio Corp. (https://www.siliconstudio.co.jp)
+﻿// Copyright (c) Xenko contributors (https://xenko.com) and Silicon Studio Corp. (https://www.siliconstudio.co.jp)
 // Distributed under the MIT license. See the LICENSE.md file in the project root for more information.
 using System;
 using System.Threading.Tasks;
@@ -32,8 +32,7 @@ namespace Orgine.Gameplay
         public override void Update()
         {
             // Check if the coin has been collected
-            bool triggered;
-            if (!activated && (triggeredEvent?.TryReceive(out triggered) ?? false))
+            if (!activated && (triggeredEvent?.TryReceive(out bool triggered) ?? false))
             {
                 CollisionStarted();
             }

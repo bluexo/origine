@@ -153,6 +153,7 @@ Hierarchy:
         - ref!! 065a4aa8-69ec-47d8-b561-6a5847944f26
         - ref!! 0ddffa94-dc32-47b1-9642-fc445f7db9c3
         - ref!! 946367f6-86dc-44c0-b54f-9361fbfedb0e
+        - ref!! 09c7fa7b-c94a-47d1-b49a-bcc9006c67a0
     Parts:
         -   Entity:
                 Id: 0012425a-8167-4220-b4f9-5a50ab7c9538
@@ -456,6 +457,38 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             a2d6ca1adcf6ec41a4c7d29eb46ea480: ref!! 4468e89f-0db2-4c21-bce4-e95ec3240660
+        -   Folder: Vehicles
+            Entity:
+                Id: 09c7fa7b-c94a-47d1-b49a-bcc9006c67a0
+                Name: SM_Veh_Future_01
+                Components:
+                    173c0dc354f5c0bdca81999e263eaf29: !TransformComponent
+                        Id: a79f58a4-bb09-4d9e-9124-d79d519785c9
+                        Position: {X: 0.0, Y: 0.0, Z: -0.009032468}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    5a03780efd9904044f1af45d3e8c76b9: !ModelComponent
+                        Id: f1bbf43f-b2f9-4bb0-af24-2d6cf336b4f9
+                        Model: dc0d9f17-ab04-4955-beab-5c432096db57:Models/SM_Veh_Future_01
+                        Materials:
+                            e48762a1bbd15cab370e8a419bf0e4c4~0: c9daea5b-ceeb-4bf2-8e4a-54640435c75f:Materials/FrameA
+                    2a6e1d981436f4604e215b914dc6eb98: !StaticColliderComponent
+                        Id: 173acbea-38a6-4591-a45d-1af13807c1bf
+                        CollisionGroup: CustomFilter2
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        ColliderShapes:
+                            c32ebdf4ab5053fc04dce884147b04db: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 2.0, Y: 1.0, Z: 5.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Folder: Platform/Walls
             Entity:
                 Id: 0b7e24eb-59d6-4e1f-b058-a5e6833fc61d

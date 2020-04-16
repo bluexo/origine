@@ -1,0 +1,15 @@
+!Model
+Id: dc0d9f17-ab04-4955-beab-5c432096db57
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Source: !file ../../../../../StarX/client/Assets/Packs/PolygonSciFiCity/Models/SM_Veh_Future_01.fbx
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    5089f3cb48fa091078fe058d7a662611:
+        Name: Body1
+        MaterialInstance:
+            Material: 285153b6-f4d1-4c4f-b0bb-da57856d630c:Materials/BodyVehicle
+Modifiers: {}
+~SourceHashes:
+    1e9ce3636460974af80a40f8987cb4ab~../../../../../StarX/client/Assets/Packs/PolygonSciFiCity/Models/SM_Veh_Future_01.fbx: 9eef2b762b143887df4427bf2d6b470c
