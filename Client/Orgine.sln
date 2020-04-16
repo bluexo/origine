@@ -1,0 +1,21 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 16
+VisualStudioVersion = 16.0.0.0
+MinimumVisualStudioVersion = 16.0.0.0
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orgine.Windows", "Orgine.Windows\Orgine.Windows.csproj", "{F7891D02-E885-448D-AAC1-B3D8E92A7A1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orgine.Game", "Orgine.Game\Orgine.Game.csproj", "{3FEC4B5D-03DC-4AC9-9808-78F20DADED5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orgine.UWP", "Orgine.UWP\Orgine.UWP.csproj", "{9B2FD615-5E5B-4F6C-A8EA-97B71D766699}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orgine.Linux", "Orgine.Linux\Orgine.Linux.csproj", "{5869C847-1DF9-462C-AD95-51EF3C25C47E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orgine.macOS", "Orgine.macOS\Orgine.macOS.csproj", "{EFF2B61F-57AE-45AE-B6D0-4E63409C5304}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orgine.Android", "Orgine.Android\Orgine.Android.csproj", "{DEF03DBE-323C-489E-8C16-6EBB7545C8AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orgine.iOS", "Orgine.iOS\Orgine.iOS.csproj", "{0836E1C3-DCDE-4A24-9E99-7DF95A09961B}"
+EndProject
+Global
+EndGlobal

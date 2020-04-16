@@ -1,0 +1,7 @@
+!Texture
+Id: 8909804e-3b17-4efb-9833-e84eeb88b377
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Source: !file ../../Resources/Textures/normalmapUpper.png
+Type: !NormalMapTextureType {}
+IsStreamable: false

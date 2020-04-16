@@ -1,0 +1,18 @@
+!NavigationMeshAsset
+Id: b0cf0a72-25b5-4a14-a9ea-f4b0dcdc7c0c
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Scene: c03fd628-7e86-454d-a611-2060e040f345:MainScene
+IncludedCollisionGroups: CustomFilter1
+BuildSettings:
+    CellHeight: 0.1
+    CellSize: 0.1
+    TileSize: 16
+    MinRegionArea: 10
+    RegionMergeArea: 20
+    MaxEdgeLen: 20.0
+    MaxEdgeError: 2.0
+    DetailSamplingDistance: 2.0
+    MaxDetailSamplingError: 2.0
+SelectedGroups:
+    2b0e99aa83f145fab54d56cbb80b44ef: 9398904c-72b7-ca9b-e966-23346704ae98

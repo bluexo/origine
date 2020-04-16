@@ -1,0 +1,98 @@
+﻿@page "/logging"
+
+@using System.Threading;
+@using Microsoft.Extensions.Logging
+@inject LoggingQueryProvider provider;
+
+<h1>日志</h1>
+
+<p>当前服务器日志.</p>
+
+@if (logs.Count == 0)
+{
+    <p><em>当前日志为空</em></p>
+}
+else
+{
+    <div class="container-fluid">
+        <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+            <button type="button" class="btn btn-success" @onclick=@(()=>RefreshLogAsync())>刷新</button>
+            <button type="button" class="btn btn-danger" @onclick="@(()=>ClearLogAsync(DateTime.Now))">清空</button>
+            <div class="btn-group" role="group">
+                <button id="btnGroupDrop1" type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    分组查看
+                </button>
+                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                    <a class="dropdown-item" href="#">Warn</a>
+                    <a class="dropdown-item" href="#">Error</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content flex-sm-grow-1"></div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>记录主体</th>
+                <th>级别</th>
+                <th>消息</th>
+                <th>时间</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var log in logs)
+            {
+                <tr>
+                    <td>@log.Logger</td>
+                    @switch (log.Level)
+                    {
+                        case LogLevel.Error:
+                            <td class="bg-danger">@log.Level</td>
+                            break;
+                        case LogLevel.Warning:
+                            <td class="bg-warning">@log.Level</td>
+                            break;
+                        default:
+                            <td>@log.Level</td>
+                            break;
+                    }
+                    <td>@log.Message</td>
+                    <td>@log.Date</td>
+                    <td>
+                        <button @onclick=@(() => RemoveLogAsync(log.Id))>删除</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code
+{
+    private List<LoggingInfo> logs = new List<LoggingInfo>();
+    private Timer autoRefreshTimer;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await RefreshLogAsync();
+    }
+
+    private async Task RemoveLogAsync(string id)
+    {
+        await provider.RemoveAsync(id);
+        await RefreshLogAsync();
+    }
+
+    private async Task ClearLogAsync(DateTime dateTime)
+    {
+        await provider.ClearAsync(dateTime);
+        await RefreshLogAsync();
+    }
+
+    private async Task RefreshLogAsync()
+    {
+        logs = await provider.GetLogging();
+        this.StateHasChanged();
+    }
+}

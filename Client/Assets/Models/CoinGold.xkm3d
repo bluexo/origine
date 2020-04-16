@@ -1,0 +1,15 @@
+!Model
+Id: 16cccaf5-e6c1-421b-8ed6-b20645782efa
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Source: !file ../../Resources/Models/XenkoCoin.fbx
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    580b7cbe828207e8828207e8828207e8:
+        Name: Coin
+        MaterialInstance:
+            Material: 630ba13a-02c9-4352-9b1a-eb442cd95e65:Materials/coinC2
+Modifiers: {}
+~SourceHashes:
+    ccd3a85ac449feffb6ebce751eefa3aa~../../Resources/Models/XenkoCoin.fbx: f00d518ee22cd1edef712f91c53faceb

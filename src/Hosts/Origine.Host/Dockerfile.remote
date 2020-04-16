@@ -1,4 +1,0 @@
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.0
-WORKDIR /app
-COPY . /app
-#ENTRYPOINT ["dotnet","Origine.Host.dll","-D","-H","-V:Docker"]
