@@ -37,10 +37,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Library\Origine.Configuration\Origine.Configuration.csproj" />
-    <ProjectReference Include="..\..\Library\Origine.Core.Abstraction\Origine.Core.Abstraction.csproj" />
-    <ProjectReference Include="..\..\Library\Origine.EntityFramework\Origine.EntityFramework.csproj" />
-    <ProjectReference Include="..\..\Library\Origine.Logging\Origine.Logging.csproj" />
+    <ProjectReference Include="..\..\lib\Origine.Configuration\Origine.Configuration.csproj" />
+    <ProjectReference Include="..\..\lib\Origine.Core.Abstraction\Origine.Core.Abstraction.csproj" />
+    <ProjectReference Include="..\..\lib\Origine.EntityFramework\Origine.EntityFramework.csproj" />
+    <ProjectReference Include="..\..\lib\Origine.Logging\Origine.Logging.csproj" />
   </ItemGroup>
 
   <ItemGroup>
