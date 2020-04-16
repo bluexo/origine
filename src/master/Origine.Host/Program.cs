@@ -21,7 +21,7 @@ using McMaster.Extensions.CommandLineUtils;
 
 using Origine.Network;
 using Origine.StorageProviders;
-using Origine.Storage.Accessor;
+using Origine.Accessor;
 
 namespace Origine
 {
