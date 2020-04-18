@@ -1,0 +1,173 @@
+# WebApi App
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: origine
+  labels:
+    run: webapi
+  name: webapi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: webapi
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        run: webapi
+    spec:
+      imagePullSecrets:
+      - name: harborsecret
+      containers:
+      - image: orleans-api-image # image name updated by Makefile
+        name: webapi
+        env:
+        - name: ASPNETCORE_ENVIRONMENT
+          value: "Docker"
+        command: ["dotnet","origine.WebApi.dll"]
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+        resources:
+          limits:
+            memory: "256Mi"
+            cpu: "250m"
+--- 
+
+# WebApi Service
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: origine
+  labels:
+    run: webapi
+  name: webapi
+spec:
+  type: NodePort
+  ports:
+  - port: 5000
+    protocol: TCP
+    targetPort: 5000
+    nodePort: 30610
+  selector:
+    run: webapi
+---
+
+# Silo App
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: origine
+  labels:
+    run: host
+  name: host
+spec:
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  replicas: 2
+  selector:
+    matchLabels:
+      run: host
+  template:
+    metadata:
+      labels:
+        run: host
+    spec:
+      imagePullSecrets:
+      - name: harborsecret
+      containers:
+      - image: orleans-silo-image # image name updated by Makefile
+        name: host
+        command: ["dotnet","origine.Host.dll","-D","-V:Docker"]
+        env:
+        - name: DOTNET_ENVIRONMENT
+          value: "Docker"
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 11111
+        - containerPort: 30000
+        # resources:
+        #   limits:
+        #     memory: "1024Mi"
+        #     cpu: "500m"
+---
+
+# Silo Service
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: origine
+  labels:
+    run: host
+  name: host
+spec:
+  ports:
+  - port: 8880
+    name: health
+    protocol: TCP
+    targetPort: 8880
+  selector:
+    run: host
+  type: LoadBalancer
+---
+
+# Dashboard App
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: origine
+  labels:
+    run: dashboard
+  name: dashboard
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: dashboard
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        run: dashboard
+    spec:
+      imagePullSecrets:
+      - name: harborsecret
+      containers:
+      - image: orleans-dashboard-image # image name updated by Makefile
+        name: dashboard
+        command: ["/bin/sh","-c"]
+        args: ["dotnet origine.Dashboard.dll"]
+        env:
+        - name: ASPNETCORE_ENVIRONMENT
+          value: "Docker"
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+        # resources:
+        #   limits:
+        #     memory: "1024Mi"
+        #     cpu: "500m"
+--- 
+
+# Dashboard Service
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: origine
+  labels:
+    run: dashboard
+  name: dashboard
+spec:
+  type: NodePort
+  ports:
+  - port: 8000
+    protocol: TCP
+    targetPort: 8000
+    nodePort: 31610
+  selector:
+    run: dashboard
+---

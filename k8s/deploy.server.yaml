@@ -1,0 +1,37 @@
+# gameserver App
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: origine
+  labels:
+    run: gameserver
+  name: gameserver
+spec:
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  replicas: 1
+  selector:
+    matchLabels:
+      run: gameserver
+  template:
+    metadata:
+      labels:
+        run: gameserver
+    spec:
+      hostNetwork: true
+      dnsPolicy: ClusterFirstWithHostNet
+      imagePullSecrets:
+      - name: harborsecret
+      containers:
+      - image: gameserver-image # image name updated by Makefile
+        name: gameserver
+        command: ["/bin/sh","-c"]
+        args: ["dotnet gameserver.dll /ports=30100-30116"]
+        env:
+        - name: DOTNET_ENVIRONMENT
+          value: "Production"
+        imagePullPolicy: Always
+---
