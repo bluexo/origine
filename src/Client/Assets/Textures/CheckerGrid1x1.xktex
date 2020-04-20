@@ -1,8 +1,0 @@
-!Texture
-Id: d6895c98-0690-4c95-8dbc-a2e31e12ecfc
-SerializedVersion: {Xenko: 2.0.0.0}
-Tags: []
-Source: !file ../../Resources/Textures/CheckerGrid1x1.png
-Type: !ColorTextureType
-    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
-    Alpha: None
